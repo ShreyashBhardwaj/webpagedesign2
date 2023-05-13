@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/2f342cf45a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="formbox">
+            <h1 id="title">Sign up</h1>
+            <form>
+                <div class="inpg">
+                    <div class="inpf" id="nf">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="name" />
+                    </div>
+                    <div class="inpf">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="inpf">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" />
+                    </div>
+                    <p>Lost password.<a href="">Click Here!</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signup">sign up</button>
+                    <button type="button" id="signin" class="disable">sign in</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let signup = document.getElementById("signup");
+        let signin = document.getElementById("signin");
+        let nf = document.getElementById("nf");
+        let title = document.getElementById("title");
+
+
+        signin.onclick = function () {
+            nf.style.maxHeight = "0";
+            title.innerHTML = "Sign in";
+            signup.classList.add("disable");
+            signin.classList.remove("disable");
+
+        }
+        signup.onclick = function () {
+            nf.style.maxHeight = "60px";
+            title.innerHTML = "Sign up";
+            signup.classList.remove("disable");
+            signin.classList.add("disable");
+
+        }
+
+    </script>
+</body>
+</html>
